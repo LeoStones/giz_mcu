@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">植物宝</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_init">InitActivity</string>
+
+    <string-array name="person">
+        <item>男主人</item>
+        <item>女主人</item>
+        <item>小孩</item>
+        <item>设备</item>
+    </string-array>
+
+    <string name="title_activity_device"></string>
+    <string name="title_activity_host"></string>
+    <string name="title_activity_kid"></string>
+    <string name="title_activity_bind">绑定</string>
+    <string name="title_activity_once">植物宝</string>
+    <string name="title_activity_clound">CloundActivity</string>
+
+</resources>

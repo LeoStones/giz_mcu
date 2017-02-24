@@ -1,0 +1,180 @@
+{
+    "name": "\u690d\u7269\u5b9d", 
+    "packetVersion": "0x00000004", 
+    "protocolType": "standard", 
+    "product_key": "07b24913b07f4b38b8bafeac1dd1d7e2", 
+    "entities": [
+        {
+            "display_name": "\u673a\u667a\u4e91\u5f00\u53d1\u5957\u4ef6", 
+            "attrs": [
+                {
+                    "display_name": "person", 
+                    "name": "person", 
+                    "data_type": "uint8", 
+                    "position": {
+                        "byte_offset": 0, 
+                        "unit": "byte", 
+                        "len": 1, 
+                        "bit_offset": 0
+                    }, 
+                    "uint_spec": {
+                        "addition": 0, 
+                        "max": 4, 
+                        "ratio": 1, 
+                        "min": 1
+                    }, 
+                    "type": "status_writable", 
+                    "id": 0, 
+                    "desc": "....."
+                }, 
+                {
+                    "display_name": "home_temperature", 
+                    "name": "home_temperature", 
+                    "data_type": "uint8", 
+                    "position": {
+                        "byte_offset": 1, 
+                        "unit": "byte", 
+                        "len": 1, 
+                        "bit_offset": 0
+                    }, 
+                    "uint_spec": {
+                        "addition": 0, 
+                        "max": 50, 
+                        "ratio": 1, 
+                        "min": 0
+                    }, 
+                    "type": "status_readonly", 
+                    "id": 1, 
+                    "desc": "....."
+                }, 
+                {
+                    "display_name": "home_humidity", 
+                    "name": "home_humidity", 
+                    "data_type": "uint8", 
+                    "position": {
+                        "byte_offset": 2, 
+                        "unit": "byte", 
+                        "len": 1, 
+                        "bit_offset": 0
+                    }, 
+                    "uint_spec": {
+                        "addition": 0, 
+                        "max": 50, 
+                        "ratio": 1, 
+                        "min": 0
+                    }, 
+                    "type": "status_readonly", 
+                    "id": 2, 
+                    "desc": "....."
+                }, 
+                {
+                    "display_name": "soil_humidity", 
+                    "name": "soil_humidity", 
+                    "data_type": "uint8", 
+                    "position": {
+                        "byte_offset": 3, 
+                        "unit": "byte", 
+                        "len": 1, 
+                        "bit_offset": 0
+                    }, 
+                    "uint_spec": {
+                        "addition": 0, 
+                        "max": 100, 
+                        "ratio": 1, 
+                        "min": 0
+                    }, 
+                    "type": "status_readonly", 
+                    "id": 3, 
+                    "desc": "....."
+                }
+            ], 
+            "name": "entity0", 
+            "id": 0
+        }
+    ], 
+    "ui": {
+        "object": {
+            "version": 4, 
+            "showEditButton": false
+        }, 
+        "sections": [
+            {
+                "elements": [
+                    {
+                        "title": "person", 
+                        "bind": "floatValue:float", 
+                        "object": {
+                            "action": "entity0", 
+                            "bind": [
+                                "entity0.person"
+                            ], 
+                            "uint_spec": {
+                                "max": 4, 
+                                "step": 1, 
+                                "min": 1
+                            }, 
+                            "perm": "W"
+                        }, 
+                        "value": 0, 
+                        "key": "entity0.person", 
+                        "maximumValue": 4, 
+                        "minimumValue": 1, 
+                        "type": "QFloatElement"
+                    }, 
+                    {
+                        "object": {
+                            "action": "entity0", 
+                            "bind": [
+                                "entity0.home_temperature"
+                            ], 
+                            "uint_spec": {
+                                "max": 50, 
+                                "step": 1, 
+                                "min": 0
+                            }, 
+                            "perm": "N"
+                        }, 
+                        "type": "QLabelElement", 
+                        "key": "entity0.home_temperature", 
+                        "title": "home_temperature"
+                    }, 
+                    {
+                        "object": {
+                            "action": "entity0", 
+                            "bind": [
+                                "entity0.home_humidity"
+                            ], 
+                            "uint_spec": {
+                                "max": 50, 
+                                "step": 1, 
+                                "min": 0
+                            }, 
+                            "perm": "N"
+                        }, 
+                        "type": "QLabelElement", 
+                        "key": "entity0.home_humidity", 
+                        "title": "home_humidity"
+                    }, 
+                    {
+                        "object": {
+                            "action": "entity0", 
+                            "bind": [
+                                "entity0.soil_humidity"
+                            ], 
+                            "uint_spec": {
+                                "max": 100, 
+                                "step": 1, 
+                                "min": 0
+                            }, 
+                            "perm": "N"
+                        }, 
+                        "type": "QLabelElement", 
+                        "key": "entity0.soil_humidity", 
+                        "title": "soil_humidity"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
